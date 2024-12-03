@@ -1,0 +1,959 @@
+<!-- wap to make website of https://www.swiggy.com/city/lucknow in html,css -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        :root {
+            --bgcolor: #f0f0f5;
+            --lbgcolor: #c9bdf4;
+
+        }
+
+        @font-face {
+            font-family: extrabold;
+            src: url(Gilroy-ExtraBold-Rupee.woff2);
+        }
+
+        @font-face {
+            font-family: bold;
+            src: url(Gilroy-Bold-Rupee.woff2);
+        }
+        *{
+            padding-inline: 0px;
+            margin-inline: 0px;
+        }
+
+        h2 {
+            font-family: extrabold;
+        }
+
+        .main {
+            min-height: 1500px;
+            width: 100%;
+            margin: 0px 0px -10px 0px;
+            padding: 0;
+
+            .top {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                z-index: 3;
+                position: sticky;
+                background-color: white;
+                top: 0px;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.692);
+                align-items: center;
+
+                .lg {
+                    height: 100%;
+                    width: 20%;
+                    box-sizing: border-box;
+                    /* background-color: aqua; */
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        height: 45px;
+                        width: 150px;
+                        /* box-sizing: border-box; */
+                        padding-left: 150px;
+                        /* padding-top: 20px; */
+                    }
+                }
+
+                .lctn {
+                    height: 100%;
+                    width: 25%;
+                    display: flex;
+                    box-sizing: border-box;
+                    align-items: center;
+                    /* background-color: aqua; */
+                    padding-left: 20px;
+
+                    .ri-send-plane-fill {
+                        color: #ff5200;
+                        height: 25px;
+                        width: 25px;
+                        box-sizing: border-box;
+                        padding-top: 4px;
+                        padding-left: 5px;
+                        border-left: 1px solid gray;
+                    }
+
+                    h5 {
+                        font-size: 18px;
+                        font-family: bold;
+                    }
+                }
+
+                .srch {
+                    height: 100%;
+                    /* background-color: aqua; */
+                    width: 45%;
+                    padding-top: 15px;
+                    box-sizing: border-box;
+                    /* font-size: 25px; */
+                    color: white;
+
+                    input {
+                        height: 50px;
+                        width: 500px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: #f0f0f5;
+                        padding-left: 20px;
+                        margin-top: -8px;
+                        box-sizing: border-box;
+
+                        font-size: 18px;
+
+                        ::placeholder {
+                            color: gray;
+                        }
+                    }
+
+                    i {
+                        /* padding-bottom: 5px; */
+                        border-radius: 50%;
+                        background-color: rgba(0, 0, 0, 0.77);
+                    }
+
+                    #id {
+                        margin-top: 25px;
+                        font-size: 30px;
+                        padding: 5px;
+                        transform: translateY(5px);
+                        margin-left: 15px;
+
+                    }
+                }
+            }
+
+            .slider {
+                height: 330px;
+                margin: 0px;
+                padding: 0px;
+                
+                width: 100%;
+                display: flex;
+                font-family: extrabold;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background: linear-gradient(to top, #c9bcf4, white);
+
+                .lft {
+                    height: 100%;
+                    width: 50%;
+
+                    h1 {
+                        font-size: 45px;
+                        padding-left: 150px;
+                        padding-top: 40px;
+                        box-sizing: border-box;
+                        color: rgb(63, 63, 63);
+                        margin-bottom: 0px;
+                    }
+
+                    svg {
+                        margin-top: -10px;
+                        margin-left: 150px;
+                    }
+                }
+
+                .ryt {
+                    height: 100%;
+                    width: 50%;
+
+                    img {
+                        height: 330px;
+                        width: 550px;
+                    }
+                }
+            }
+
+            .content {
+                min-height: 800px;
+                width: 80%;
+                margin: 0px auto;
+
+                .r1 {
+                    border-bottom: 1px solid grey;
+                    font-family: extrabold;
+
+                    img {
+                        height: 180px;
+                        width: 160px;
+                    }
+                }
+
+                .r2 {
+                    border-bottom: 1px solid grey;
+                    padding-top: 40px;
+                    box-sizing: border-box;
+
+                    .card {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0px 20px;
+                        box-sizing: border-box;
+
+                        .c1 {
+                            h2 {
+                                font-family: extrabold;
+                                font-size: 20px;
+                            }
+
+                            .img {
+                                height: 210px;
+                                width: 320px;
+                                border-radius: 20px;
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                                padding-top: 170px;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                font-size: 25px;
+                                color: white;
+                                font-family: extrabold;
+                            }
+
+                            .img2 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yood4aumr1wbxed1odxk);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img3 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/xabqkb24rjrv8m1jrjpw);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img:hover {
+                                /* height: 200px;
+                                width:310px;
+                                padding-top: 170px; */
+                                scale: .9;
+                                transition: all ease .5s;
+                            }
+
+                            h3 {
+                                font-family: bold;
+                                margin-bottom: -15px;
+                            }
+
+                            h4 {
+                                font-family: Gilroy;
+                                margin-bottom: -15px;
+                                font-size: 20px;
+
+                                i {
+                                    color: white;
+                                    border-radius: 50%;
+                                    font-size: 18px;
+                                    /* padding: 1px; */
+                                    box-sizing: border-box;
+                                    background-color: green;
+
+                                }
+                            }
+
+                            p {
+                                color: rgba(1, 41, 1, 0.489);
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .r3 {
+                    border-bottom: 1px solid grey;
+                    padding-top: 40px;
+                    box-sizing: border-box;
+
+                    button {
+                        height: 45px;
+                        width: 280px;
+                        border: 1px solid gray;
+                        border-radius: 10px;
+                        font-family: bold;
+                        margin: 20px 420px;
+                        color: gray;
+                        /* margin-bottom: 20px; */
+                    }
+
+                    h2 {
+                        font-family: extrabold;
+                    }
+
+                    #filters {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 6px;
+                        
+                        padding-bottom: 10px;
+                        margin-top: -10px;
+
+                        h4 {
+                            border: 1px solid rgba(128, 128, 128, 0.616);
+                            display: inline-block;
+                            border-radius: 20px;
+                            font-weight: bold;
+                            padding: 10px 20px;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 15px;
+                            color: rgba(0, 0, 0, 0.752);
+                        }
+                    }
+
+                    .card {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0px 20px;
+                        box-sizing: border-box;
+
+                        .c1 {
+                            h2 {
+                                font-family: extrabold;
+                                font-size: 20px;
+                            }
+
+                            .img {
+                                height: 170px;
+                                width: 260px;
+                                border-radius: 20px;
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                                padding-top: 130px;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                font-size: 25px;
+                                color: white;
+                                font-family: extrabold;
+                            }
+
+                            .img2 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yood4aumr1wbxed1odxk);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img3 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/xabqkb24rjrv8m1jrjpw);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img4 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/5/30/d79c3b2e-ef3f-4c85-b36c-2b0d1ed43cee_855699.jpg);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img5 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mz76cmtw79td4mzk2fvi);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img6 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/22/3b0036f4-bd40-4592-ba9c-1767fc1ecdd2_942440.jpg);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img7 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/19/23fd3f50-0dc4-4b5e-909b-9ed033894d81_871340.jpg);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img8 {
+                                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.734)), url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c583ca6ce40b426797a78ae2ac91f2ec);
+                                background-size: cover;
+                                background-position: 50% 45%;
+                            }
+
+                            .img:hover {
+                                /* height: 200px;
+                                width:310px;
+                                padding-top: 170px; */
+                                scale: .9;
+                                transition: all ease .5s;
+                            }
+
+                            h3 {
+                                font-family: bold;
+                                margin-bottom: -15px;
+                            }
+
+                            h4 {
+                                font-family: Gilroy;
+                                margin-bottom: -15px;
+                                font-size: 20px;
+
+                                i {
+                                    color: white;
+                                    border-radius: 50%;
+                                    font-size: 18px;
+                                    /* padding: 1px; */
+                                    box-sizing: border-box;
+                                    background-color: green;
+
+                                }
+                            }
+
+                            p {
+                                color: rgba(1, 41, 1, 0.489);
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .r4 {
+                    padding-top: 40px;
+                    margin-bottom: 40px;
+
+                    .box {
+                        border: 1px solid grey;
+                        border-radius: 10px;
+                        padding-left: 20px;
+
+                        h2 {
+                            color: gray;
+                        }
+
+                        h4 {
+                            color: red;
+                            font-family: bold;
+                        }
+                    }
+                }
+
+                .r5 {
+
+                    /* padding-top: 0px; */
+                    h2 {
+                        margin-top: 60px;
+                    }
+
+                    .line {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+
+                        .l1 {
+                            height: 45px;
+                            width: 270px;
+                            border: 1px solid rgba(128, 128, 128, 0.311) !important;
+                            border-radius: 10px;
+                            line-height: 40px;
+                            font-family: bold;
+                            color: grey;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                min-height: 500px;
+                width: 100%;
+                background-color: var(--bgcolor);
+
+                .lft {
+                    height: 500px;
+                    width: 50%;
+                    padding-top: 80px;
+                    padding-left: 300px;
+                    box-sizing: border-box;
+                    float: left;
+
+                    .cont {
+                        height: 150px;
+                        width: 300px;
+
+                        img {
+                            width: 165px;
+                            height: 55px;
+                            margin-bottom: 0px;
+                        }
+
+                        h4 {
+                            margin-top: 0px;
+                            font-family: bold;
+                            color: gray;
+                        }
+                    }
+                }
+
+                .ryt {
+                    height: 500px;
+                    width: 50%;
+                    float: left;
+                    display: flex;
+                    z-index: 1;
+                    margin-left: -150px;
+                    justify-content: start;
+
+                    /* font-family: bold; */
+                    .col1 {
+                        width: 200px;
+                        margin: 60px 30px 30px 30px;
+
+                        h3 {
+                            font-family: extrabold;
+
+                        }
+
+                        button {
+                            width: 120px;
+                            height: 25px;
+                            color: gray;
+                            border: 1px solid gray;
+                            border-radius: 5px;
+                        }
+
+                        ul {
+                            list-style: none;
+
+                            li {
+                                margin-bottom: 10px;
+                                margin-left: 15px;
+                                color: gray;
+                                font-stretch: extra-expanded;
+                                font-weight: 600 !important;
+                                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            }
+                        }
+
+                        .cola {
+                            margin-bottom: 60px;
+
+                            h3 {
+                                font-family: extrabold;
+                            }
+
+                            h2 {
+                                color: gray;
+                                font-size: 20px;
+                            }
+
+                            ul {
+                                list-style: none;
+
+                                li {
+                                    margin-bottom: 10px;
+                                    margin-left: 15px;
+                                    color: gray;
+                                }
+                            }
+                            i{
+                                font-size: 20px;
+                                margin-top: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .f1 {
+                height: 120px;
+                width: 100%;
+                background-color: var(--bgcolor);
+                box-sizing: border-box;
+
+                .box {
+                    border-top: 1px solid black;
+                    height: 120px;
+                    width: 80%;
+                    margin: 0px auto;
+                    box-sizing: border-box;
+                    display: flex;
+                    padding-top: 20px;
+
+                    .left {
+                        height: 100%;
+                        width: 60%;
+                        background-color: var(--bgcolor);
+                        padding-left: 40px;
+                        box-sizing: border-box;
+                        font-family: bold;
+                        font-size: 27px;
+
+
+                    }
+
+                    .rit {
+                        height: 100%;
+                        width: 40%;
+                        background-color: var(--bgcolor);
+
+                        img {
+                            height: 65px;
+                            width: 180px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="lg">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_260/portal/m/seo/Logos/Swiggy/Swiggy%20logo-2.png"
+                    alt="">
+            </div>
+            <div class="lctn">
+                <i class="ri-send-plane-fill"></i>
+                <h5>Setup your precise location</h5>
+            </div>
+            <div class="srch">
+                <input type="text" placeholder="Search for restaurant and food">
+                <i class="ri-user-3-fill" id="id"></i>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="lft">
+                <h1>Order Food <br>Online in <br>Lucknow</h1>
+                <svg width="20%" height="20%" viewBox="0 0 78 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5.25939C27 -0.240624 53.5 -0.2406 77 4.25939" stroke="#FF5200" stroke-width="1.5">
+                    </path>
+                </svg>
+            </div>
+            <div class="ryt">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1002,h_600/v1678428358/portal/m/seo_web/dweb_header.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="content">
+            <div class="r1">
+                <h2>What's on your mind?</h2>
+                <div class="apple">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_North%20Indian.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Chinese.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/17/58760e8e-324f-479e-88fa-31800120ea38_Rolls1.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_cake.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="r2">
+                <h2>Top restaurant chains in Lucknow</h2>
+                <div class="card">
+                    <div class="c1">
+                        <div class="img">ITEMS AT $199</div>
+                        <h3>CHINESE WOK</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Chinese, Asian, Tibetian,... <br> Alambagh</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img2 img">$125 off Above $199</div>
+                        <h3>Mughal Zaika Aminabad</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Kebabs,Biryani <br> Aminabad</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img3 img">60% off Upto $115</div>
+                        <h3>Ai Bak Aminabad</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Continental,Biryani <br> Aminabad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="r3">
+                <h2>Restaurants with online food delivery in Lucknow</h2>
+                <div id="filters">
+                    <h4>Filter <i class="fa-duotone fa-solid fa-arrow-up-big-small"></i></h4>
+                    <h4>Sort By <i class="fa-solid fa-angle-down"></i></h4>
+                    <h4>Fast Delivery</h4>
+                    <h4>New on Swiggy</h4>
+                    <h4>Rating 4.0+</h4>
+                    <h4>Pure Veg</h4>
+                    <h4>Offers</h4>
+                    <h4>On Time</h4>
+                    <h4>Less than Rs. 300</h4>
+                </div>
+                <div class="card">
+                    <div class="c1">
+                        <div class="img">ITEMS AT $199</div>
+                        <h3>CHINESE WOK</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Continental,Biryani <br> Aminabad</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img2 img">$125 off Above $199</div>
+                        <h3>Mughal Zaika Aminabad</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Kebabs,Biryani <br> Aminabad</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img3 img">60% off Upto $115</div>
+                        <h3>Ai Bak Aminabad</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Chinese, Asian, Tibetian,... <br> Alambagh</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img4 img">$125 off Above $199</div>
+                        <h3>CHINESE WOK</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Kebabs,Biryani <br> Aminabad</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="c1">
+                        <div class="img img5">60% off Upto $115</div>
+                        <h3>Paratha</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Continental,Biryani <br> Aminabad</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img6 img">ITEMS AT $199</div>
+                        <h3>Ice Cream</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Chinese, Asian, Tibetian,... <br> Alambagh</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img7 img">60% off Upto $115</div>
+                        <h3>Pizza Hut</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Continental,Biryani <br> Aminabad</p>
+                    </div>
+                    <div class="c1">
+                        <div class="img8 img">ITEMS AT $199</div>
+                        <h3>Roll</h3>
+                        <h4><i class="ri-star-s-fill"></i> 4.2 35-40 mins</h4>
+                        <p>Mughalai, Kebabs,Biryani <br> Aminabad</p>
+                    </div>
+                </div>
+                <button>Show More</button>
+            </div>
+            <div class="r4">
+                <h2>Food culture in Lucknow</h2>
+                <div class="box">
+                    <h2>Order Food Online in Lucknow to Taste Its delicacies</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus voluptas nisi quis laborum
+                        quae dolorum molestias exercitationem eius, id consectetur in, aliquid deleniti incidunt
+                        blanditiis. Quis velit dignissimos laborum fugiat est eum, distinctio commodi maxime minima,
+                        explicabo inventore illum at neque iste. Ipsum culpa dolorum id alias quas voluptas, accusamus
+                        vitae ipsam consequuntur nemo adipisci incidunt molestiae maiores aut. Dolorum voluptatum
+                        aspernatur commodi perferendis deleniti ut consectetur soluta architecto, porro incidunt facere
+                        eveniet sequi unde, ex culpa iure! Explicabo, possimus?</p>
+                    <h4>See more</h4>
+                </div>
+            </div>
+            <div class="r5">
+                <h2>Explore localities in and around Lucknow</h2>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Sikrauri</div>
+                    <div class="l1">Sarsaundi</div>
+                    <div class="l1">Muradabad</div>
+                    <div class="l1">Barauli Jata</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <h2>What's Lucknow eating! People ordering in Lucknow</h2>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Sikrauri</div>
+                    <div class="l1">Sarsaundi</div>
+                    <div class="l1">Muradabad</div>
+                    <div class="l1">Barauli Jata</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <h2>Restaurant Chains in Lucknow</h2>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Sikrauri</div>
+                    <div class="l1">Sarsaundi</div>
+                    <div class="l1">Muradabad</div>
+                    <div class="l1">Barauli Jata</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <h2>Popular Dishes in Lucknow</h2>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Sikrauri</div>
+                    <div class="l1">Sarsaundi</div>
+                    <div class="l1">Muradabad</div>
+                    <div class="l1">Barauli Jata</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <h2>More Food Options Near Me</h2>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Sikrauri</div>
+                    <div class="l1">Sarsaundi</div>
+                    <div class="l1">Muradabad</div>
+                    <div class="l1">Barauli Jata</div>
+                </div>
+                <div class="line">
+                    <div class="l1">Ndc Lucknow G</div>
+                    <div class="l1">Ndc Lucknow Chowk Ho</div>
+                    <div class="l1">Amarhar</div>
+                    <div class="l1">Thakurganj</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="lft">
+                <div class="cont">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_260/portal/m/seo/Logos/Swiggy/Swiggy%20logo-2.png"
+                        alt="">
+                    <h4>&copy; 2024 Swiggy Limited</h4>
+                </div>
+            </div>
+            <div class="ryt">
+                <div class="col1">
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About us</li>
+                        <li>Swiggy Corporate</li>
+                        <li>Career</li>
+                        <li>Team</li>
+                        <li>SwiggyOne</li>
+                        <li>Swiggy Instamart</li>
+                        <li>Swiggy Dineout</li>
+                        <li>Swiggy Genie</li>
+                    </ul>
+                </div>
+                <div class="col1">
+                    <div class="cola">
+                        <h3>Contact US</h3>
+                        <ul>
+                            <li>Help & Support</li>
+                            <li>Partner with Us</li>
+                            <li>Ride with Us</li>
+                        </ul>
+                    </div>
+                    <div class="cola">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Cookie Policy</li>
+                            <li>Privacy Policy</li>
+                            <li>Investor Relation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col1">
+                    <h3>Available in:</h3>
+                    <ul>
+                        <li>Banglore</li>
+                        <li>Hydrabad</li>
+                        <li>Gurgaon</li>
+                        <li>Delhi</li>
+                        <li>Mumbai</li>
+                        <li>Pune</li>
+                    </ul>
+                    <button>679 cities</button>
+                </div>
+                <div class="col1">
+                    <div class="cola">
+                        <h3>Lift at Swiggy</h3>
+                        <ul>
+                            <li>Explore with Swiggy </li>
+                            <li>Swiggy News</li>
+                            <li>Snackables</li>
+                        </ul>
+                    </div>
+                    <div class="cola">
+                        <h3>Social Links</h3>
+                        <h2><i class="ri-linkedin-box-fill"></i> <i class="ri-instagram-line"></i> <i
+                                class="ri-facebook-fill"></i> <i class="ri-twitter-fill"></i> <i
+                                class="ri-reddit-line"></i></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f1">
+            <div class="box">
+                <div class="left">
+                    <p>For better experience,download the Swiggy app now</p>
+                </div>
+                <div class="rit">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png"
+                        alt="">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
